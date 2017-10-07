@@ -1,0 +1,14 @@
+//= require bootstrap.min
+//= require menuzord
+//= require owl.carousel.min
+//= require jquery.counterup 
+//= require waypoints.min 
+//= require countdown 
+//= require jquery.bootFolio
+//= require jquery.magnific-popup
+//= require jquery-ui
+//= require rev-function
+//= require jquery.bxslider    
+//= require smoothscroll    
+//= require wow
+//= require main

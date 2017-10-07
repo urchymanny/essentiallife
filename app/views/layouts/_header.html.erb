@@ -1,0 +1,155 @@
+<!-- =========================
+        START HEADER SECTION
+      ============================== -->
+<div class="outslider_loading">
+    <div class="la-ball-scale-ripple-multiple la-dark la-2x">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<div class="log-in-up">
+    <div class="log-in-content">
+        <div class="log-in-head text-center">
+            <img src="/assets/log-in-key.png" alt="">
+            <h2>Login To Your Account</h2>
+        </div>
+        <form action="<%= request.fullpath %>#">
+            <input type="text" class="form-control" placeholder="User name">
+            <input type="password" class="form-control" placeholder="password">
+            <input type="submit" value="LOGIN">
+            <input type="checkbox" value="Remember!">Remember! <a href="<%= request.fullpath %>#"><span>Register/</span>Forget Password?</a>
+        </form>
+        <a href="<%= request.fullpath %>#" class="remove-log-in"><img src="/assets/log-in-cross.png" alt=""></a>
+    </div>
+    <div class="log-in-overlay"></div>
+</div>
+<div class="consult-up">
+    <div class="consult-up-content">
+        <div class="container">
+            <div class="contact-form">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="contact-form-3-text">
+                            <img src="/assets/google-iframe.png" class="img-responsive" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="contact-form-left contact-form-3">
+                            <h2>Drop Me A Line</h2>
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" placeholder="First Name">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" placeholder="Phone">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" placeholder="Subject">
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="col-sm-12 text-center">
+                                        <button type="button" class="btn btn-dm">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <a href="<%= request.fullpath %>#" class="remove-consult"><img src="/assets/log-in-cross.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="consult-overlay"></div>
+</div>
+<div class="right-full-menu">
+    <div class="right_menu_item">
+        <div class="right_menu_item-content">
+            <div class="right-menu-icon">
+                <a href="home.html"><img src="/assets/logo.png" alt=""></a>
+            </div>
+            <div class="right-menu-list">
+                <ul>
+                    <li class="active"><a href="<%= root_url %>">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Plans</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="right-menu-social-box">
+                <ul class="cms-social">
+                    <li class="facebook">
+                        <a href="<%= request.fullpath %>#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="twitter">
+                        <a href="<%= request.fullpath %>#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="google">
+                        <a href="<%= request.fullpath %>#"><i class="fa fa-pinterest"></i></a>
+                    </li>
+                    <li class="linkedin">
+                        <a href="<%= request.fullpath %>#"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                    <li class="linkedin">
+                        <a href="<%= request.fullpath %>#"><i class="fa fa-rss"></i></a>
+                    </li>
+                </ul>
+                <div class="footer-bottom-right right-menu-copyright">
+                    <p>© 2017 Essential Life. All Rights Reserved</p>
+                    <p>Developed by<span><a href="http://madsuite.com">www.madsuite.com</a></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="close_ic"></div>
+</div>
+<header class="header-area navbar-fixed-top">
+    <div class="container custom-header">
+        <div class="row">
+            <div id="menuzord" class="menuzord">
+                <a href="home.html" class="menuzord-brand"><img src="/assets/logo-a.png" alt="">Essential<span style="font-weight: 300; color: #000">Life</span></a>
+                <div class="header-contact">
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Downloads</a></li>
+                        <li class="log-in-search"><a href="<%= request.fullpath %>#">Login</a></li>
+                        <li class="consult-search"><a href="<%= request.fullpath %>#">How It Works</a></li>
+                    </ul>
+                </div>
+                <div class="header-search">
+                    <ul>
+                        <li class="right_menu"><a href="<%= request.fullpath %>#"><i class="fa fa-bars"></i></a></li>
+                    </ul>
+                </div>
+                <ul class="menuzord-menu menuzord-menu-bg">
+                    <li class="active"><a href="home.html">Home</a></li>
+                    <li><a href="#">ABOUT Us</a></li>
+                    <li><a href="#">Our Products</a></li>
+                    <li><a href="#">Solutions</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Skill Aquisition</a></li>
+                            <li><a href="#">Free Medical Services</a></li>
+                            <li><a href="#">Social Responsibilities</a></li>
+                            <li><a href="#">HR Management</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">COMPENSATION Plans</a></li>
+                    <li><a href="#">Contact US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- =========================
+        END HEADER SECTION
+      ============================== -->
