@@ -5642,7 +5642,7 @@ ul.page-breadcrumbs li + li:before {
 -----------------------------------------*/
 
 .feature-head-area{
-    background: url(/assets/page-titles/feature-bg.png)no-repeat;
+    background: url(/assets/feature-coming-soon.jpg)no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
