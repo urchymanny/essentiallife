@@ -444,7 +444,7 @@ jQuery(function($) {
         21. DATE COUNTDOWN
         =========================================================================================
         */
-        var endDate = "July 26, 2016 20:39:00";
+        var endDate = "October 23, 2017 13:00:00";
         $('.tk-countdown .row').countdown({
             date: endDate,
             render: function(data) {
@@ -482,7 +482,7 @@ jQuery(function($) {
                 })
             } else {
                 $(this).parent().find(".error_message").remove();
-                $(this).parent().append("<div class='error_message'>Please entire a valid email. </div>");
+                $(this).parent().append("<div class='error_message'>Please enter a valid email. </div>");
             }
         });
         $("#contact_submit").click(function() {
