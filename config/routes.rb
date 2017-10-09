@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'dashboard/index'
+
   get 'static_pages/home'
   get 'static_pages/coming_soon'
   get 'static_pages/register'
