@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+    <!-- App Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <!-- App title -->
+    <title>Essential Life - Dashboard</title>
+     <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'dashboard' %>
+        <!-- Modernizr js -->
+        <%= javascript_include_tag 'modernizr.min' %>
+</head>
+
+<body class="fixed-left">
+            <%= yield %>
+
+</body>
+    
+    <script>
+    var resizefunc = [];
+</script>
+    <%= javascript_include_tag 'dashboard' %>
+    <% if params[:controller] == "dashboard" && params[:action] == "index" %>
+        
+        <script src="/assets/jquery.dashboard.js"></script>
+    <% end %>
+
+</html>
