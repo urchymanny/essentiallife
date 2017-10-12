@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get 'static_pages/coming_soon'
   get 'static_pages/register'
 
-  root "static_pages#coming_soon"
+  root "static_pages#register"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
