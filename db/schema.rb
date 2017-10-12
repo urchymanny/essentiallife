@@ -10,9 +10,70 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20171010110049) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bonus_wallet_details", force: :cascade do |t|
+    t.decimal "amount", default: "0.0"
+    t.text "remark"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cities", force: :cascade do |t|
+    t.string "name"
+    t.integer "state_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string "name"
+    t.string "code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "states", force: :cascade do |t|
+    t.string "name"
+    t.integer "country_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "full_name"
+    t.string "phone_number"
+    t.string "email"
+    t.text "address"
+    t.integer "city_id"
+    t.integer "state_id"
+    t.integer "country_id"
+    t.string "zip_code"
+    t.integer "account_number"
+    t.string "bank_name"
+    t.string "account_name"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "sponsor_id"
+    t.decimal "wallet_balance", default: "0.0"
+    t.decimal "bonus_wallet_balance", default: "0.0"
+    t.string "ancestry"
+    t.string "refferal_id"
+    t.index ["ancestry"], name: "index_users_on_ancestry"
+  end
+
+  create_table "wallet_details", force: :cascade do |t|
+    t.decimal "amount", default: "0.0"
+    t.text "remark"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
