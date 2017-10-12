@@ -37,23 +37,27 @@
                         <h2>Fill <b>All</b> Fields Below </h2>
                         <div class="show_result"></div>
                         <div class="result_message"></div>                         
-                        <form>
+                        <%= simple_form_for @user do |f| %>
                            <div class="row">
                          	  	
                          	  	<h5 class="section-header">Sponsor <i class="fa fa-angle-double-down" aria-hidden="true"></i></h5>
                          	  	<div class="col-sm-12">
-                                 <input type="text" id="s_id" class="form-control" placeholder="Sponsor ID"> 
+                                 <!-- <input type="text" id="s_id" class="form-control" placeholder="Sponsor ID"> -->
+                                 <%= f.input :refferal_id, class: "form-control", placeholder:"Sponsor ID"  %>
                               </div>
                               <div class="col-sm-12">
-                                 <input type="text" id="s_name" class="form-control" placeholder="Sponsor Name"> 
+                                 <input type="text" id="s_name" class="form-control" placeholder="Sponsor Name">
+                                 <%#= f.input :sponsor_name, class: "form-control", placeholder:"Sponsor ID"  %> 
                               </div>
 
                               <h5 class="section-header">Personal Details <i class="fa fa-angle-double-down" aria-hidden="true"></i></h5>
                               <div class="col-sm-12">
-                                 <input type="text" id="username" class="form-control" placeholder="Username"> 
+                                 <!-- <input type="text" id="username" class="form-control" placeholder="Username">  -->
+                                 <%= f.input :username, class: "form-control", placeholder:"Username"  %> 
                               </div>
                               <div class="col-sm-12">
-                                  <input type="text" class="form-control" id="full_name" placeholder="Full Name">
+                                  <!-- <input type="text" class="form-control" id="full_name" placeholder="Full Name"> -->
+                                  <%= f.input :full_name, as: :radio, collection: ['male', 'female'], class: "form-control", placeholder:"Username"  %> 
                               </div>
                               <div class="col-sm-12">
                                   <input type="text" class="form-control" id="Phone" placeholder="Phone">
@@ -105,7 +109,7 @@
                                  <button type="button" id="submit" class="btn btn-dm">Register</button>
                               </div>
                            </div>
-                        </form> 
+                        <% end %> 
                      </div> 
                   </div> 
                   <div class="col-sm-4">
