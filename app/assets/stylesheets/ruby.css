@@ -1,0 +1,158 @@
+.ruby .tree{
+  width: 960px;
+}
+.ruby ul.tree span.parent, .ruby ul.tree span.first-downline, .ruby ul.tree span.second-downline{
+  font-size: 20px;
+}
+
+.ruby ul.tree li span{
+  width: 6em
+}
+.ruby ul.tree span label{
+  font-size: 15px;
+  display: block;
+}
+
+@media (max-width:1439px) {
+  .ruby .tree{
+    width: 960px;
+  }
+  .ruby ul.tree span.parent, .ruby ul.tree span.first-downline, .ruby ul.tree span.second-downline{
+    font-size: 20px;
+  }
+
+  .ruby ul.tree li span{
+    width: 5.4em
+  }
+  .ruby ul.tree span label{
+    font-size: 15px;
+    display: block;
+  }
+
+}
+
+@media (max-width:1023px) {
+  .ruby .tree{
+    width: 960px;
+  }
+  .ruby ul.tree span.parent, .ruby ul.tree span.first-downline, .ruby ul.tree span.second-downline{
+    font-size: 17px;
+  }
+
+  .ruby ul.tree li span{
+    width: 5em
+  }
+  .ruby ul.tree span label{
+    font-size: 15px;
+    display: block;
+  }
+}
+
+@media (max-width:767px) {
+  .ruby .tree{
+    width: 960px;
+  }
+  .ruby ul.tree span.parent, .ruby ul.tree span.first-downline, .ruby ul.tree span.second-downline{
+    font-size: 15px;
+  }
+
+  .ruby ul.tree li span{
+    width: 4em
+  }
+  .ruby ul.tree span label{
+    font-size: 10px;
+    display: block;
+  }
+
+}
+
+@media (max-width:499px) {
+  .ruby .tree{
+    width: 960px;
+  }
+  .ruby ul.tree span.parent, .ruby ul.tree span.first-downline, .ruby ul.tree span.second-downline{
+    font-size: 12px;
+  }
+
+  .ruby ul.tree li span{
+    width: 3.6em
+  }
+  .ruby ul.tree span label{
+    font-size: 9px;
+    display: block;
+  }
+
+}
+
+@media (max-width:424px) {
+  .card-box {
+    padding:2px;
+  }
+  .ruby ul.tree span.parent, .ruby ul.tree span.first-downline, .ruby ul.tree span.second-downline{
+    font-size: 11px;
+  }
+
+  .ruby ul.tree li span{
+    width: 4em
+  }
+  .ruby ul.tree span label{
+    font-size: 9px;
+    display: block;
+  }
+
+}
+
+@media (max-width:411px) {
+  .card-box {
+    padding:2px;
+  }
+  .ruby ul.tree span.parent, .ruby ul.tree span.first-downline, .ruby ul.tree span.second-downline{
+    font-size: 10px;
+  }
+
+  .ruby ul.tree li span{
+    width: 4em
+  }
+  .ruby ul.tree span label{
+    font-size: 9px;
+    display: block;
+  }
+
+}
+
+
+@media (max-width:374px) {
+  .card-box {
+    padding:2px;
+  }
+  .ruby ul.tree span.parent, .ruby ul.tree span.first-downline, .ruby ul.tree span.second-downline{
+    font-size: 8px;
+  }
+
+  .ruby ul.tree li span{
+    width: 4.7em
+  }
+  .ruby ul.tree span label{
+    font-size: 9px;
+    display: block;
+  }
+
+}
+
+@media (max-width:359px) {
+  .card-box {
+    padding:2px;
+  }
+  .ruby ul.tree span.parent, .ruby ul.tree span.first-downline, .ruby ul.tree span.second-downline{
+    font-size: 8px;
+  }
+
+  .ruby ul.tree li span{
+    width: 4em
+  }
+  .ruby ul.tree span label{
+    font-size: 9px;
+    display: block;
+  }
+
+}
