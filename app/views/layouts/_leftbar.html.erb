@@ -4,26 +4,25 @@
         <!--- Sidemenu -->
         <div id="sidebar-menu">
             <ul>
-                <li class="text-muted menu-title">Navigation</li>
                 <li class="has_sub">
-                    <a href="#" class="waves-effect"><span class="label label-pill label-primary float-right">1</span><i class="zmdi zmdi-view-dashboard"></i><span> My Dashboard </span> </a>
+                    <a href="<%= dashboard_index_path %>" class="waves-effect"><span class="label label-pill label-primary float-right">1</span><i class="zmdi zmdi-view-dashboard"></i><span> My Dashboard </span> </a>
                 </li>
                 <li class="has_sub">
-                    <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-chart"></i> <span> My Network </span> <span class="menu-arrow"></span></a>
+                    <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-chart"></i> <span> My Genealogy </span> <span class="menu-arrow"></span></a>
                     <ul class="list-unstyled">
-                        <li><a href="#0">Feeder Stage</a></li>
-                        <li><a href="#0">Ruby Stage 1</a></li>
-                        <li><a href="#0">Ruby Stage 2</a></li>
-                        <li><a href="#0">Ruby Stage 3</a></li>
-                        <li><a href="#0">Ruby Stage 4</a></li>
+                        <li><a href="<%= dashboard_feeder_path %>">Feeder Stage</a></li>
+                        <li><a href="<%= dashboard_ruby_one_path %>">Ruby One</a></li>
+                        <li><a href="<%= dashboard_ruby_two_path %>">Ruby Two</a></li>
+                        <li><a href="<%= dashboard_ruby_three_path %>">Ruby Three</a></li>
+                        <li><a href="<%= dashboard_ruby_four_path %>">Ruby Four</a></li>
                     </ul>
                 </li>
                 <li class="has_sub">
                     <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-money"></i> <span>My E-Wallet </span> <span class="menu-arrow"></span></a>
                     <ul class="list-unstyled">
-                        <li><a href="#0">Fund Transfer</a></li>
-                        <li><a href="#0">Encash Wallet</a></li>
-                        <li><a href="#0">Account Statement</a></li>
+                        <li><a href="<%= dashboard_transfer_funds_path %>">Fund Transfer</a></li>
+                        <li><a href="<%= dashboard_deposit_funds_path %>">Encash Wallet</a></li>
+                        <li><a href="<%= dashboard_account_statement_path %>">Account Statement</a></li>
                         <li><a href="#0">Change Password</a></li>
                     </ul>
                 </li>
