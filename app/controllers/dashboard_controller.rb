@@ -1,5 +1,6 @@
 class DashboardController < ApplicationController
-	layout "dashboard"
+	
+  layout "dashboard"
   def index
   end
 
@@ -34,4 +35,5 @@ class DashboardController < ApplicationController
   def account_statement
     
   end
+
 end

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'sessions/create'
 
-  get 'dashboard/index'
+  get 'dashboard/', to: "dashboard#index"
   get 'dashboard/feeder'
   get 'dashboard/ruby_one'
   get 'dashboard/ruby_two'
