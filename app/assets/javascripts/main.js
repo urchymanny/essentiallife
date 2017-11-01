@@ -444,7 +444,7 @@ jQuery(function($) {
         21. DATE COUNTDOWN
         =========================================================================================
         */
-        var endDate = "October 23, 2017 13:00:00";
+        var endDate = "October 30, 2017 13:00:00";
         $('.tk-countdown .row').countdown({
             date: endDate,
             render: function(data) {

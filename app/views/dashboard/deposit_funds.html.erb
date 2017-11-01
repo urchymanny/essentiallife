@@ -1,0 +1,99 @@
+<div id="wrapper">
+    <%= render "layouts/topbar" %>
+        <%= render "layouts/leftbar" %>
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="page-title-box">
+                                    <h4 class="page-title float-left">Deposit Funds</h4>
+                                    <ol class="breadcrumb float-right">
+                                        <li class="breadcrumb-item"><a href="#">E-wallet</a></li>
+                                        <li class="breadcrumb-item active">Funds Deposit</li>
+                                    </ol>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6" style="margin: 0px auto">
+                                <div class="card m-b-20 card-body">
+                                    <h3 class="card-title" style="color: black">Encash E-Wallet</h3>
+                                    <p class="card-text" style="margin-top: 0; font-size: 80%">You are about deposit funds into your e-wallet account <span class="label label-warning">(3% charge commission charge)</span></p>
+                                    <div class="divider"></div>
+                                    <form>
+                                    	<script src="https://js.paystack.co/v1/inline.js"></script>
+                                        <fieldset class="form-group">
+                                            <label for="transact-pin">Amount <span title="required">*</span></label>
+                                            <input type="number" class="form-control" id="transact-pin" placeholder="Enter amount">
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            <label for="transact-pin">Transaction Pin <span title="required">*</span></label>
+                                            <input type="password" class="form-control" id="transact-pin" placeholder="Enter your transaction Pin">
+                                            <small class="text-muted">Don't disclose this pin with anyone!</small>
+                                        </fieldset>
+                                        <button type="button" onclick="payWithPaystack()" class="btn btn-primary">Deposit Funds</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- container -->
+                </div>
+                <!-- content -->
+            </div>
+            <!-- End content-page -->
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+            <%= render "layouts/dashfoot" %>
+</div>
+<!-- END wrapper -->
+
+<style type="text/css">
+	.divider{
+		border-top: 1px solid #e8e8e8;
+		margin-bottom: 1em
+	}
+	label span{
+		color: red
+	}
+</style>
+
+<script>
+  var Amount
+  function payWithPaystack(){
+  	getAmount()
+    var handler = PaystackPop.setup({
+      key: 'pk_test_4661d7677862241864c75443c8a84ef67f49f4e0',
+      email: 'sampleuser@gmail.com',
+      amount: Amount,
+      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+      metadata: {
+         custom_fields: [
+            {
+                display_name: "Mobile Number",
+                variable_name: "mobile_number",
+                value: "+2348012345678"
+            }
+         ]
+      },
+      callback: function(response){
+          alert('success. transaction ref is ' + response.reference);
+          window.location.replace("/dashboard/index/");
+      },
+      onClose: function(){
+          alert('window closed');
+      }
+    });
+    handler.openIframe();
+  }
+  function getAmount(){
+  	Amount = document.getElementById('transact-pin').value * 100
+  }
+</script>

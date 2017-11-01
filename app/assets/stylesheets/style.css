@@ -18709,3 +18709,14 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
   text-shadow: rgba(255, 255, 255, 0.3) 5px 1px, rgba(255, 255, 255, 0.2) 12px 3px, rgba(255, 255, 255, 0.1) 6px 4px; }
 
 /*# sourceMappingURL=style.css.map */
+
+label.string{
+  font-size: 14px;
+}
+
+.popover-body p{
+  margin: 0px;
+}
+.popover-body p span{
+  color: red;
+}
