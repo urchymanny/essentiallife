@@ -1,11 +1,9 @@
 class User < ApplicationRecord
     require 'matrix'
+   
     has_secure_password
-    has_ancestry
+    has_ancestry cache_depth: true
     
-
- 
-
     #validations
     validates :password, 
               :email, 
@@ -21,7 +19,7 @@ class User < ApplicationRecord
               :bank_name,
               :account_name,  presence: true
 
-    validates :email, :username, :sponsor_id,  uniqueness: true
+    validates :email, :username, :refferal_id,  uniqueness: true
     validates :password, :confirmation => true
     
 
@@ -32,6 +30,7 @@ class User < ApplicationRecord
     has_many :bonus_wallet_details
     has_many :wallet_details
 
+<<<<<<< 5dc9612d45b88987a5a06b0ffeccc8b04da2bde4
     # #callbacks
     # before_validation :generate_refferal_id, on: :create
     # before_create :check_for_sponsor, on: :create
@@ -85,8 +84,36 @@ class User < ApplicationRecord
     # def first_downlines
     #     self.children.first
     # end
+=======
+    #callbacks
+    before_validation :generate_refferal_id, on: :create
 
 
+    def first_downlines
+       self.children.first
+    end
+
+    def self.insert_at_node(sponsore, new_user)
+        raise "Are you trying to register your self?" if sponsore == new_user
+        if sponsore.is_childless?
+             sponsore.children.create(new_user)
+        elsif sponsore.children.size == 1
+             sponsore.children.first.siblings.create(new_user)
+        else
+            raise "Not understanding the flow" 
+        end 
+    end
+
+    def self.search_and_insert_node(sponsore, new_user) 
+        insert_at_node(sponsore, new_user)  
+    end
+>>>>>>> chore(): setup matrix
+
+    def self.run_matrix(params_user)
+        sponsore = User.find_by(refferal_id: params_user[:sponsor_id])
+        new_user = params_user
+        search_and_insert_node(sponsore, new_user)
+    end
     
     # private
     
