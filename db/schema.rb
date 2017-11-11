@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< 5dc9612d45b88987a5a06b0ffeccc8b04da2bde4
-ActiveRecord::Schema.define(version: 20171012112830) do
-=======
 ActiveRecord::Schema.define(version: 20171030144232) do
->>>>>>> chore(): setup matrix
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,10 +62,10 @@ ActiveRecord::Schema.define(version: 20171030144232) do
     t.decimal "bonus_wallet_balance", default: "0.0"
     t.string "ancestry"
     t.string "refferal_id"
+    t.integer "ancestry_depth", default: 0
     t.string "city"
     t.string "state"
     t.string "country"
-    t.integer "ancestry_depth", default: 0
     t.index ["ancestry"], name: "index_users_on_ancestry"
   end
 

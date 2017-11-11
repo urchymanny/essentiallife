@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-  	@user = User.new(user_params)
+  	@user = User.run_matrix(user_params)
 
   	respond_to do |format|
   		if @user.save
@@ -65,12 +65,12 @@ class UsersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_game
+    def set_user
     	@user = User.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-    	params.require(:user).permit(:username, :full_name, :phone_number, :email, :address, :city, :state, :country, :zip_code, :account_number, :bank_name, :account_name, :password_digest, :sponsor_id, :refferal_id)
+    	params.require(:user).permit(:username, :full_name, :phone_number, :email, :address, :city, :state, :country, :zip_code, :account_number, :bank_name, :account_name, :password_digest, :sponsor_id, :refferal_id, :password, :password_confirmation)
     end
 end
