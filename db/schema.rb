@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171012112830) do
+ActiveRecord::Schema.define(version: 20171030144232) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20171012112830) do
     t.decimal "bonus_wallet_balance", default: "0.0"
     t.string "ancestry"
     t.string "refferal_id"
+    t.integer "ancestry_depth", default: 0
     t.string "city"
     t.string "state"
     t.string "country"

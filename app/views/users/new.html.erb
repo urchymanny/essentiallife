@@ -36,6 +36,14 @@
                             <div class="show_result"></div>
                             <div class="result_message"></div>
                             <%= simple_form_for @user do |f| %>
+
+                               <% if @user.errors.present? %>
+                                 <ul>
+                                    <% @user.errors.full_messages.each do |msg| %>
+                                    <li><%= msg %></li>
+                                    <% end %> 
+                                 </ul>
+                               <% end %>
                                 <div class="row">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
@@ -44,7 +52,7 @@
                                         <div class="panel-body">
                                             <div class="col-sm-12">
                                                 <!-- <input type="text" id="s_id" class="form-control" placeholder="Sponsor ID"> -->
-                                                <%= f.input :refferal_id, input_html: { class: "form-control" }, placeholder:"Enter Sponsor ID", label: 'Sponsor ID', required: true  %>
+                                                <%= f.input :sponsor_id, input_html: { class: "form-control" }, placeholder:"Enter Sponsor ID", label: 'Sponsor ID', required: true  %>
                                             </div>
                                             <div class="col-sm-12">
                                                 <input type="text" id="s_name" class="form-control" placeholder="Sponsor Name">
@@ -77,29 +85,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <h3 class="panel-title">Personal Details</h3>
-                                        </div>
-                                        <div class="panel-body">
-                                            <div class="col-sm-12">
-				                                        <!-- <input type="text" id="username" class="form-control" placeholder="Username">  -->
-				                                        <%= f.input :username, input_html: { class: "form-control" }, placeholder:"Enter Username", label: "Username"  %>
-				                                    </div>
-				                                    <div class="col-sm-12">
-				                                        <!-- <input type="text" class="form-control" id="full_name" placeholder="Full Name"> -->
-				                                        <%= f.input :full_name, input_html: { class: "form-control" }, placeholder:"Enter name here", label: "Full Name"   %>
-				                                    </div>
-				                                    <div class="col-sm-12">
-				                                        <!-- <input type="text" class="form-control" id="Phone" placeholder="Phone"> -->
-				                                        <%= f.input :phone_number, input_html: { class: "form-control" }, placeholder:"Enter Phone number here", label: "Phone Number"  %>
-				                                    </div>
-				                                    <div class="col-sm-12">
-				                                        <!-- <input type="email" id="Email" class="form-control" placeholder="Email"> -->
-				                                        <%= f.input :email, input_html: { class: "form-control" }, placeholder:"me@example.com", label: "Email Address"  %>
-				                                    </div>
-                                        </div>
-                                    </div>
+                                 
 
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
@@ -166,6 +152,7 @@
                                     </div>
                                     <div class="col-sm-6 text-center">
                                         <button type="button" id="submit" class="btn btn-dm">Register</button>
+                                        <%= f.submit "Register", as: :button, class: "btn btn-dm" %>
                                     </div>
                                 </div>
                                 <% end %>
