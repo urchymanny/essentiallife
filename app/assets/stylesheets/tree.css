@@ -1,0 +1,137 @@
+ul.tree {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+ul.tree,
+ul.tree ul {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul.tree li {
+  display: block;
+  width: auto;
+  float: left;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+}
+
+ul.tree ul li {
+  background-image: url(data:image/gif;base64,R0lGODdhAQABAIABAAAAAP///ywAAAAAAQABAAACAkQBADs=);
+  background-repeat: repeat-x;
+  background-position: left top;
+}
+
+ul.tree li span {
+  display: block;
+  width: 5em;
+      /*
+  uncomment to fix levels
+  height: 1.5em;
+  */
+  margin: 0 auto;
+  text-align: center;
+  white-space: normal;
+  letter-spacing: normal;
+}
+
+ul.tree ul li:last-child {
+  background-repeat: no-repeat;
+  background-size: 50% 1px;
+  background-position: left top;
+}
+
+ul.tree ul li:first-child {
+  background-repeat: no-repeat;
+  background-size: 50% 1px;
+  background-position: right top;
+}
+
+ul.tree ul li:first-child:last-child {
+  background: none;
+}
+
+ul.tree ul li span {
+  background: url(data:image/gif;base64,R0lGODdhAQABAIABAAAAAP///ywAAAAAAQABAAACAkQBADs=) no-repeat 50% top;
+  background-size: 1px 0.8em;
+  padding-top: 1.2em;
+}
+
+ul.tree ul {
+  background: url(data:image/gif;base64,R0lGODdhAQABAIABAAAAAP///ywAAAAAAQABAAACAkQBADs=) no-repeat 50% top;
+  background-size: 1px 0.8em;
+  margin-top: 0.2ex;
+  padding-top: 1em;
+}
+body {
+  font-family: sans-serif;
+  color: #666;
+}
+
+
+
+ul.tree,
+#twrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+ul.tree {
+  width: 650px;
+}
+
+.clearer {
+  clear: both;
+}
+
+p {
+  margin-top: 2em;
+}
+
+
+
+.feeder ul.tree span.parent, .feeder ul.tree span.first-downline, .feeder ul.tree span.second-downline{
+font-size:30px;
+}
+.feeder ul.tree span label{
+  font-size: 15px;
+  display: block;
+}
+
+
+@media (max-width:767px) {
+  .feeder ul.tree span.parent, .feeder ul.tree span.first-downline, .feeder ul.tree span.second-downline{
+  font-size:17px;
+  }
+  .feeder ul.tree span label{
+    font-size: 10px;
+    display: block;
+  }
+
+}
+
+@media (max-width:424px) {
+  .feeder ul.tree span.parent, .feeder ul.tree span.first-downline, .feeder ul.tree span.second-downline{
+  font-size:14px;
+  }
+  .feeder ul.tree span label{
+    font-size: 10px;
+    display: block;
+  }
+
+}
+
+@media (max-width:374px) {
+  .feeder ul.tree span.parent, .feeder ul.tree span.first-downline, .feeder ul.tree span.second-downline{
+  font-size:12px;
+  }
+  .feeder ul.tree span label{
+    font-size: 10px;
+    display: block;
+  }
+
+}

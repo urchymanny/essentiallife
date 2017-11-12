@@ -14,12 +14,13 @@
             <img src="/assets/log-in-key.png" alt="">
             <h2>Login To Your Account</h2>
         </div>
-        <form action="<%= request.fullpath %>#">
+        <%= form_tag('/sessions') do %>
             <input type="text" class="form-control" placeholder="User name">
             <input type="password" class="form-control" placeholder="password">
             <input type="submit" value="LOGIN">
             <input type="checkbox" value="Remember!">Remember! <a href="<%= request.fullpath %>#"><span>Register/</span>Forget Password?</a>
-        </form>
+       
+        <% end %>
         <a href="<%= request.fullpath %>#" class="remove-log-in"><img src="/assets/log-in-cross.png" alt=""></a>
     </div>
     <div class="log-in-overlay"></div>

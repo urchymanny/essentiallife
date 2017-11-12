@@ -1,0 +1,78 @@
+<div id="wrapper">
+    <%= render "layouts/topbar" %>
+        <%= render "layouts/leftbar" %>
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="page-title-box">
+                                    <h4 class="page-title float-left">Funds Transfer</h4>
+                                    <ol class="breadcrumb float-right">
+                                        <li class="breadcrumb-item"><a href="#">E-wallet</a></li>
+                                        <li class="breadcrumb-item active">Funds Transfer</li>
+                                    </ol>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6" style="margin: 0px auto">
+                                <div class="card m-b-20 card-body">
+                                    <h3 class="card-title" style="color: black">E-wallet Transfer</h3>
+                                    <p class="card-text" style="margin-top: 0; font-size: 80%">You are about to transfer funds from your e-wallet account to another member's e-wallet account <span class="label label-warning">(3% charge commission charge)</span></p>
+                                    <div class="divider"></div>
+                                    <form>
+                                        <fieldset class="form-group">
+                                            <label for="reciever-ID">E-wallet account ID <span title="required">*</span></label>
+                                            <input type="text" class="form-control" id="reciever-ID" placeholder="Enter Reciever's E-wallet account ID" autocomplete="false">
+                                            <small class="text-muted">The recipient must have an e-wallet account with Essential Life.</small>
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            <label>E-wallet Account Name</label>
+                                            <input class="form-control" type="text" placeholder="Mba Uchenna" readonly="">
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            <label for="transact-pin">Amount <span title="required">*</span></label>
+                                            <input type="number" class="form-control" id="transact-pin" placeholder="Enter amount">
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            <label for="transact-pin">Transaction Pin <span title="required">*</span></label>
+                                            <input type="password" class="form-control" id="transact-pin" placeholder="Enter your transaction Pin">
+                                            <small class="text-muted">Don't disclose this pin with anyone!</small>
+                                        </fieldset>
+                                        <fieldset class="form-group">
+                                            <label for="transaction-note">Transaction notes</label>
+                                            <textarea class="form-control" id="transaction-note" rows="2"></textarea>
+                                        </fieldset>
+                                        <button type="submit" class="btn btn-primary">Transfer Funds</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- container -->
+                </div>
+                <!-- content -->
+            </div>
+            <!-- End content-page -->
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+            <%= render "layouts/dashfoot" %>
+</div>
+<!-- END wrapper -->
+
+<style type="text/css">
+	.divider{
+		border-top: 1px solid #e8e8e8;
+		margin-bottom: 1em
+	}
+	label span{
+		color: red
+	}
+</style>
