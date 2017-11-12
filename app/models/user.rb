@@ -1,4 +1,4 @@
-git class User < ApplicationRecord
+class User < ApplicationRecord
     require 'matrix'
    
     has_secure_password
