@@ -52,7 +52,7 @@ class User < ApplicationRecord
 
       saved = false
       
-      sponsore.descendants.at_depth(descendant_depth).each do |sponsor|
+      sponsore.descendants(:at_depth => descendant_depth).each do |sponsor|
         if sponsor.is_childless? or sponsor.children.count == 1
           new_user[:sponsor_id] = sponsor.refferal_id
           $user = sponsor.children.create(new_user)
